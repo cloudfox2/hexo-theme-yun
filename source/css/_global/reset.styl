@@ -1,13 +1,15 @@
 body {
   font-family: $font-family-sans-serif;
   font-weight: $font-family-sans-serif-weight;
+  color: $body;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.04);
   margin: 0;
   padding: 0;
   line-height: 2;
 }
 
 ::selection {
-  color: #fff;
+  color: $light;
   background: $selection-bg;
 }
 
@@ -17,7 +19,7 @@ a {
   transition: color 0.1s;
 
   &:hover, &:focus {
-    color: $colors.danger;
+    color: $orange;
   }
 
   &:active {

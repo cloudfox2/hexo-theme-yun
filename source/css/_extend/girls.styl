@@ -17,8 +17,13 @@
   display: inline-flex;
   text-align: center;
   justify-content: center;
-  width: 8rem;
-  margin: 1rem;
+  width: 12rem;
+  margin: 2rem;
+
+  +mobile() {
+    width: 8rem;
+    margin: 1rem;
+  }
 
   .girl {
     &-info {
@@ -30,13 +35,18 @@
     &-avatar {
       object-fit: cover;
       object-position: center top;
-      width: 4rem;
-      height: 4rem;
+      width: 12rem;
+      height: 12rem;
       border-radius: 50%;
       padding: 0.2rem;
       background-color: #fff;
       box-shadow: 0 0 1rem rgba(0, 0, 0, 0.12);
       transition: 0.5s;
+
+      +mobile() {
+        width: 8rem;
+        height: 8rem;
+      }
 
       &:hover {
         box-shadow: 0 0 2rem rgba(0, 0, 0, 0.12);
@@ -44,14 +54,18 @@
     }
 
     &-name {
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
 
     &-from {
-      font-size: 12px;
+      font-size: 0.9rem;
       font-family: $font-family-serif;
       font-weight: bold;
       color: $dark;
+      
+      +mobile() {
+        font-size: 0.6rem;
+      }
 
       &::before {
         content: '「';
